@@ -3,15 +3,13 @@ package studio8;
 import support.cse131.NotYetImplementedException;
 
 public class Question {
-	
-	/**
-	 * Constructor
-	 * @param prompt
-	 * @param answer
-	 * @param points
-	 */
+	private String prompt;
+	private String answer;
+	private int points;
 	public Question(String prompt, String answer, int points) {
-		throw new NotYetImplementedException();
+		this.prompt = prompt;
+		this.answer = answer;
+		this.points = points;
 	}
 	
 	/**
@@ -34,24 +32,15 @@ public class Question {
 			return 0;
 		}
 	}
-	
-	/**
-	 * Getter method for the points possible
-	 * @return int points
-	 */
 	public int getPoints() {
-		throw new NotYetImplementedException();
+		return points;
 	}
-	
-	/**
-	 * Getter method for the answer to the question
-	 * @return String answer
-	 */
 	public String getAnswer() {
-		throw new NotYetImplementedException();
+		return answer;
 	}
 	
 	public static void main(String[] args) {
-		// TODO: Create a Question object of your own!
+		Question q1 = new Question("What is 1+1?","2",1);
+		q1.displayPrompt();
 	}
 }
